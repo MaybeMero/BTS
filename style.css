@@ -1,0 +1,252 @@
+
+body {
+  background-color: rgb(212, 209, 31);
+  color: #blue;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+nav {
+  background-color: #cedeac;
+  border: 1px solid #white;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px -1px rgba(1, 53, 59, 0.055);
+  color: #888;
+  display: block;
+  margin: 8px 22px 8px 22px;
+  overflow: hidden;
+  width: 90%;
+}
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+    nav ul li {
+      display: inline-block;
+      list-style-type: none;
+
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+
+      nav > ul > li > a > .caret,
+      nav > ul > li > div ul > li > a > .caret {
+        border-top: 4px solid rgb(10, 40, 104);
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+
+        -webkit-transition: color 0.1s linear;
+          -moz-transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
+          transition: color 0.1s linear;
+      }
+
+        nav > ul > li > div ul > li > a > .caret {
+            border-bottom: 4px solid transparent;
+            border-top: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-left: 4px solid #da0cda;
+            margin: 0 0 0 8px;
+        }
+
+      nav > ul > li > a {
+        color: rgb(184, 25, 25);
+        display: block;
+        line-height: 56px;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+
+        nav > ul > li:hover {
+          background-color: rgb(7, 80, 136);
+        }
+
+        nav > ul > li:hover > a {
+          color: rgb(110, 17, 216);
+        }
+
+        nav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+
+        nav > ul > li > div ul > li:hover > a > .caret {
+            border-left-color: rgb(9, 55, 87);
+        }
+
+      nav > ul > li > div,
+      nav > ul > li > div ul > li > div {
+        background-color: rgb( 40, 44, 47 );
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 2px -1px rgba(10, 226, 179, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 165px;
+        visibility: hidden;
+
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+
+        nav > ul > li > div ul > li > div {
+            background-color: rgb( 40, 44, 47 );
+            border-radius: 0 4px 4px 4px;
+            box-shadow: inset 2px 0 5px rgba(150, 6, 163, 0.15);
+            margin-top: -42px;
+            right: -165px;
+        }
+
+        nav > ul > li:hover > div,
+        nav > ul > li > div ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+
+          nav > ul > li > div ul > li,
+          nav > ul > li > div ul > li > div ul > li {
+            display: block;
+            position: relative;
+          }
+
+            nav > ul > li > div ul > li > a,
+            nav > ul > li > div ul > li > div ul > li > a {
+              color: rgb(19, 143, 165);
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+
+              nav > ul > li > div ul > li:hover > a {
+                background-color: rgba(142, 199, 9, 0.1);
+              }
+              /* Right-aligned link */
+
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: #a3495c; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: rgb(11, 106, 170); /* White background color */
+  padding: 20px; /* Some padding */
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.footer {
+  padding: 20px; /* Some padding */
+  text-align: center; /* Center text*/
+  background: #ddd; /* Grey background */
+}
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #E7deee;
+  color: black;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+p {
+
+  font-family: "Times New Roman", Times, serif;
+}
+p {
+  font-size: 30px;
+}
+p.thick {
+  font-weight: bold;
+}
+strong{
+   font-family:"Arial";
+}
+b{
+ font-family: "courier new";
+}
+h2{
+  font-family:"roman";
+  font-colr:blue";
+}
